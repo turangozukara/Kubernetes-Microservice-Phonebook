@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webserver-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: webserver
+  template:
+    metadata:
+      labels:
+        app: webserver
+    spec:
+      containers:
+      - name: webserver-container
+        image: turangozukara/webserver
+        envFrom:
+        - secretRef:
+            name: mysecret
+        ports:
+        - containerPort: 80
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resultserver-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: resultserver
+  template:
+    metadata:
+      labels:
+        app: resultserver
+    spec:
+      containers:
+      - name: resultserver-container
+        image: turangozukara/resultserver
+        envFrom:
+        - secretRef:
+            name: mysecret
+        ports:
+        - containerPort: 80
