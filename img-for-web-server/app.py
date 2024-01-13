@@ -16,8 +16,6 @@ connection = mysql.connect()
 connection.autocommit(True)
 cursor = connection.cursor()
 
-
-# Create P table within sqlite db.
 def init_phonebook_db():
     phonebook_table = """
     CREATE TABLE IF NOT EXISTS """+ project_db +""".phonebook(
