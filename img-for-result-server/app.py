@@ -15,7 +15,6 @@ connection = mysql.connect()
 connection.autocommit(True)
 cursor = connection.cursor()
 
-# and returns result as list of dictionary 
 # `[{'id': 1, 'name':'XXXX', 'number': 'XXXXXX'}]`.
 def find_persons(keyword):
     query = f"""
