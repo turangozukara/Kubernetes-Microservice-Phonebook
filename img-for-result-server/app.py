@@ -15,7 +15,6 @@ connection = mysql.connect()
 connection.autocommit(True)
 cursor = connection.cursor()
 
-# Write a function named `find_persons` which finds persons' record using the keyword from the phonebook table in the db,
 # and returns result as list of dictionary 
 # `[{'id': 1, 'name':'XXXX', 'number': 'XXXXXX'}]`.
 def find_persons(keyword):
