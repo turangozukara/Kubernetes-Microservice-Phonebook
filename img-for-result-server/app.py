@@ -26,7 +26,6 @@ def find_persons(keyword):
         persons = [{'name':'No Result', 'number':'No Result'}]
     return persons
 
-# and assign to the static route of ('/')
 @app.route('/', methods=['GET', 'POST'])
 def find_records():
     if request.method == 'POST':
