@@ -15,7 +15,6 @@ connection = mysql.connect()
 connection.autocommit(True)
 cursor = connection.cursor()
 
-# `[{'id': 1, 'name':'XXXX', 'number': 'XXXXXX'}]`.
 def find_persons(keyword):
     query = f"""
     SELECT * FROM phonebook WHERE name like '%{keyword.strip().lower()}%';
