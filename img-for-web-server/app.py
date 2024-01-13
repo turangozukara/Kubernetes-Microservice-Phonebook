@@ -98,7 +98,6 @@ def add_record():
     else:
         return render_template('add-update.html', show_result=False, not_valid=False, action_name='save', developer_name='Turan')
 
-# using template files named `add-update.html` given under `templates` folder
 # and assign to the static route of ('update')
 @app.route('/update', methods=['GET', 'POST'])
 def update_record():
