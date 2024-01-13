@@ -78,8 +78,6 @@ def delete_person(name):
     cursor.execute(delete)
     return f'Phone record of {name.strip().title()} is deleted from the phonebook successfully'
 
-
-# Write a function named `add_record` which inserts new record to the database using `GET` and `POST` methods,
 # using template files named `add-update.html` given under `templates` folder
 # and assign to the static route of ('add')
 @app.route('/add', methods=['GET', 'POST'])
