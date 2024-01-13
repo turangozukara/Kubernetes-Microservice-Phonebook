@@ -26,8 +26,6 @@ def find_persons(keyword):
         persons = [{'name':'No Result', 'number':'No Result'}]
     return persons
 
-
-# using template files named `index.html` given under `templates` folder
 # and assign to the static route of ('/')
 @app.route('/', methods=['GET', 'POST'])
 def find_records():
