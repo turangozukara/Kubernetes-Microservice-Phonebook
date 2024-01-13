@@ -134,7 +134,6 @@ def find_records():
     return render_template('index.html', show_result=False, developer_name='Turan')
 
 
-# Add a statement to run the Flask application which can be reached from any host on port 80.
 if __name__== '__main__':
     init_phonebook_db()
     #app.run(debug=True)
