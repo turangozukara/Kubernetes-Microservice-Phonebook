@@ -36,7 +36,7 @@ def find_records():
         return render_template('index.html', show_result=False, developer_name='Turan')
 
 
-# Add a statement to run the Flask application which can be reache
+# Add a statement to run t
 if __name__== '__main__':
        #app.run(debug=True)
     app.run(host='0.0.0.0', port=80)
